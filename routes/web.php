@@ -16,8 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'project'], function () {
-    Route::get('/',[BuildController::class, 'getBuild']);
+    Route::post('/',[BuildController::class, 'redirectToBuildPage']);
     Route::get('/',[BuildController::class, 'index']);
+    Route::get('/{id}',[BuildController::class, 'getBuild']);
     /*Route::get('/', function () {
         $builds = \App\Models\Build::all();
 

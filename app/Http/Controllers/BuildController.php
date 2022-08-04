@@ -13,9 +13,12 @@ class BuildController extends Controller
         return view('build', ['builds' => $builds]);
     }
 
-    public function getBuild()
+    public function redirectToBuildPage(Request $request)
     {
-        $builds = Build::all();
+        $url = '/project/'.$request->get("project");
+
+        return redirect($url);
+        /*$builds = Build::get();
 
         foreach ($builds as $build) {
             echo $build->name . '<br/>';
@@ -23,6 +26,16 @@ class BuildController extends Controller
                 echo $room->build_id . ',';
             }
             echo '<br/>';
-        }
+        }*/
+    }
+
+    public function getBuild($id)
+    {
+        $build = Build::find($id);
+echo '<pre>';
+var_dump($build->rooms);
+echo '</pre>';
+die();
+        return view('rooms', ['rooms' => $build->rooms]);
     }
 }

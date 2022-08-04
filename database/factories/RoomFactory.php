@@ -14,8 +14,8 @@ class RoomFactory extends Factory
     public function definition()
     {
         return [
-            'type_id' => $this->faker->numberBetween(1,4),
-            'build_id' => $this->faker->numberBetween(1,5)
+            'build_id' => $this->faker->numberBetween(1,5),
+            'type_id' => $this->faker->numberBetween(1,4)
 
         ];
     }
