@@ -15,9 +15,9 @@
         @foreach($rooms as $room)
             <tr>
                 <th scope="row">1</th>
-                <td>{{$room->type_id}}</td>
+                <td>{{$room->room_type_id}}</td>
                 <td>{{$room->build_id}}</td>
-                {{--<td>{{$room->tempOut}}</td>--}}
+                <td>{{$room->roomType->type}}</td>
             </tr>
         @endforeach
         </tbody>

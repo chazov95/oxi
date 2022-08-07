@@ -15,7 +15,7 @@ class RoomFactory extends Factory
     {
         return [
             'build_id' => $this->faker->numberBetween(1,5),
-            'type_id' => $this->faker->numberBetween(1,4)
+            'room_type_id' => $this->faker->numberBetween(1,4)
 
         ];
     }

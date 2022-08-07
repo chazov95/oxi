@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Build;
+use App\Models\Room;
+use App\Models\RoomType;
 use Illuminate\Http\Request;
 
 class BuildController extends Controller
@@ -15,7 +17,7 @@ class BuildController extends Controller
 
     public function redirectToBuildPage(Request $request)
     {
-        $url = '/project/'.$request->get("project");
+        $url = '/project/' . $request->get("project");
 
         return redirect($url);
         /*$builds = Build::get();
@@ -32,10 +34,9 @@ class BuildController extends Controller
     public function getBuild($id)
     {
         $build = Build::find($id);
-echo '<pre>';
-var_dump($build->rooms);
-echo '</pre>';
-die();
+        /*foreach ($build->rooms as $room) {
+            echo $room->roomType->type;
+        }*/
         return view('rooms', ['rooms' => $build->rooms]);
     }
 }
