@@ -9,7 +9,7 @@ class Build extends Model
 {
     use HasFactory;
 
-    public function rooms() {
-        return $this->hasMany(Room::class);
+    public function zones() {
+        return $this->hasMany(Zone::class);
     }
 }

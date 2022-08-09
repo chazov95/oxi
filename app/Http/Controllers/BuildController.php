@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Build;
-use App\Models\Room;
-use App\Models\RoomType;
+use App\Models\Zone;
+use App\Models\ZoneType;
 use Illuminate\Http\Request;
 
 class BuildController extends Controller
@@ -37,6 +37,6 @@ class BuildController extends Controller
         /*foreach ($build->rooms as $room) {
             echo $room->roomType->type;
         }*/
-        return view('rooms', ['rooms' => $build->rooms]);
+        return view('zones', ['zones' => $build->zones]);
     }
 }
