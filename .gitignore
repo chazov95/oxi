@@ -14,3 +14,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/db/ca-key.pem
+/db/client-key.pem
+/db/private_key.pem
+/db/server-key.pem
