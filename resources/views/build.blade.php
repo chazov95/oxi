@@ -11,5 +11,5 @@
         </select>
         <button type="submit" class="btn btn-primary">получить проект</button>
     </form>
-    <button type="button" class="btn btn-primary" onclick="location.href='/project/create'">Новый проект</button>
+    <button type="button" class="btn btn-primary" onclick="location.href='/newBuild'">Новый проект</button>
 @endsection

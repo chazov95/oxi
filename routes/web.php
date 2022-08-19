@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'project'], function () {
     Route::post('/',[BuildController::class, 'redirectToBuildPage']);
     Route::get('/',[BuildController::class, 'index']);
-    Route::get('/{id}',[BuildController::class, 'getBuild']);
+    Route::get('/{id}',[BuildController::class, 'show']);
     /*Route::get('/', function () {
         $builds = \App\Models\Build::all();
 
@@ -31,3 +31,5 @@ Route::group(['namespace' => 'App\Http\Controllers', 'prefix' => 'project'], fun
         }
     });*/
 });
+Route::post('/create',[BuildController::class, 'store']);
+Route::view('/newBuild','newBuild');

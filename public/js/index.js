@@ -1,0 +1,3 @@
+function addZone() {
+    alert('test');
+}

@@ -9,6 +9,8 @@ class Build extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function zones() {
         return $this->hasMany(Zone::class);
     }
