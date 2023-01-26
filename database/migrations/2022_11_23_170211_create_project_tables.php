@@ -65,12 +65,12 @@ class CreateProjectTables extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('builds');
-        Schema::dropIfExists('levels');
-        Schema::dropIfExists('zone_types');
-        Schema::dropIfExists('zones');
-        Schema::dropIfExists('room_types');
+        /*Schema::dropIfExists('zone_types');
+        Schema::dropIfExists('room_types');*/
         Schema::dropIfExists('rooms');
+        Schema::dropIfExists('zones');
+        Schema::dropIfExists('levels');
+        Schema::dropIfExists('builds');
 
     }
 }

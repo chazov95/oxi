@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Room;
+use App\Models\Level;
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class LevelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -43,20 +43,20 @@ class RoomController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show($room)
+    public function show($level)
     {
-        $roomId = Room::findOrFail($room->id);
+        $levelId = Level::findOrFail($level->id);
 
-        return view('room', ['room' => $roomId]);
+        return view('level', ['level' => $levelId]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Room $room)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +65,10 @@ class RoomController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Room $room)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +76,10 @@ class RoomController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Room $room)
+    public function destroy($id)
     {
         //
     }

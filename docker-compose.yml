@@ -10,6 +10,6 @@ services:
             - ./db:/var/lib/mysql
         environment:
             MYSQL_ROOT_PASSWORD: db
-            MYSQL_DATABASE: db
+            MYSQL_DATABASE: oxi
             MYSQL_USER: db
             MYSQL_PASSWORD: db

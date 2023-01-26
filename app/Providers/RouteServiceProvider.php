@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Build;
+use App\Models\Level;
+use App\Models\Room;
+use App\Models\Zone;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -47,6 +51,10 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
         });
+        Route::model('build',Build::class);
+        Route::model('level',Level::class);
+        Route::model('zone',Zone::class);
+        Route::model('room',Room::class);
     }
 
     /**

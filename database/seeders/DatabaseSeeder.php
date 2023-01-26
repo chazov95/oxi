@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Level;
 use App\Models\Premises;
 use App\Models\Build;
 use App\Models\Room;
@@ -18,9 +19,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        //Build::factory(5)->create();
-        //Premises::factory(50)->create();
-        //Zone::factory(50)->create();
-        Room::factory(500)->create();
+        Build::factory(5)->create();
+        Level::factory(100)->create();
+        Zone::factory(400)->create();
+        Room::factory(1000)->create();
     }
 }

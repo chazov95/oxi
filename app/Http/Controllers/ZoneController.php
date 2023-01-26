@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Room;
+use App\Models\Zone;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class RoomController extends Controller
+class ZoneController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -40,23 +43,21 @@ class RoomController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @return \Illuminate\Http\Response
      */
-    public function show($room)
+    public function show($zone)
     {
-        $roomId = Room::findOrFail($room->id);
+        $zoneId = Zone::findOrFail($zone->id);
 
-        return view('room', ['room' => $roomId]);
+        return view('zone', ['zone' => $zoneId]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Room $room)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +66,10 @@ class RoomController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Room $room)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +77,10 @@ class RoomController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Room  $room
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Room $room)
+    public function destroy($id)
     {
         //
     }

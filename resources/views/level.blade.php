@@ -2,14 +2,12 @@
 
 @section('content')
 
-    <p>{{$build->name}}</p>
-    @foreach($build->levels as $level)
+    <p>Этаж {{$level->level}}</p>
+    @foreach($level->zones as $zone)
         <div class="card" style="width: 10rem;">
             {{--<img src="..." class="card-img-top" alt="...">--}}
             <div class="card-body">
-                <button class="btn btn-primary" onclick="getLevel({{$level->id}})">
-                    Этаж {{$level->level}}
-                </button>
+                <button class="btn btn-primary" onclick="getZone({{$zone->id}})">{{$zone->zoneType->type}}</button>
             </div>
         </div>
         </br>

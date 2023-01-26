@@ -6,14 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Build extends Model
+class Level extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name'];
-
-    public function levels(): HasMany
+    public function zones(): HasMany
     {
-        return $this->hasMany(Level::class);
+        return $this->hasMany(Zone::class);
     }
 }
