@@ -34,11 +34,6 @@
 <div class="container">
     @yield('content')
 </div>
-<template id="zonaTemplate">
-    <div>
-    <h>создаем новую зону</h>
-    </div>
-</template>
 </body>
 </html>
 
